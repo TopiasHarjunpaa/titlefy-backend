@@ -1,0 +1,12 @@
+htmlcov
+.pytest_cache
+.coverage
+__pycache__
+.env
+.env.test
+log.html
+output.xml
+report.html
+selenium-screenshot*
+.idea/
+.vscode
