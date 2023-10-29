@@ -22,7 +22,7 @@ def rank_title(input):
     return round(sum(word_rank.get(word, 0) for word in stemmed_words) / len(stemmed_words), 2)
 
 app = Flask(__name__)
-CORS(app, origins="http://localhost:5173", supports_credentials=True)
+CORS(app, origins="*", supports_credentials=True)
 
 
 @app.route("/", methods=["GET"])
