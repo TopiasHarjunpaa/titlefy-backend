@@ -56,6 +56,23 @@ python-versions = "*"
 Flask = ">=0.9"
 
 [[package]]
+name = "gunicorn"
+version = "21.2.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+packaging = "*"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "invoke"
 version = "2.2.0"
 description = "Pythonic task execution"
@@ -124,6 +141,14 @@ tgrep = ["pyparsing"]
 twitter = ["twython"]
 
 [[package]]
+name = "packaging"
+version = "23.2"
+description = "Core utilities for Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "regex"
 version = "2023.10.3"
 description = "Alternative regular expression module, to replace re."
@@ -165,7 +190,7 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "cfaa3c1bec978b4c78a36b71b5a672bb530e630104b6838088295482aa122a7b"
+content-hash = "ae3b77a46b574fd74f900ff9f2adec5f1a631aac0f4d575a9d3ff2368c71873e"
 
 [metadata.files]
 blinker = []
@@ -173,12 +198,14 @@ click = []
 colorama = []
 flask = []
 flask-cors = []
+gunicorn = []
 invoke = []
 itsdangerous = []
 jinja2 = []
 joblib = []
 markupsafe = []
 nltk = []
+packaging = []
 regex = []
 tqdm = []
 werkzeug = []
